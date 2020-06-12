@@ -1,6 +1,4 @@
-*.vi
 *.zip
 **/.shh
-*.lvclass
 *.m
 **/RotationVector
