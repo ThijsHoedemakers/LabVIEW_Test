@@ -1,15 +1,29 @@
+### Download GIT & TorqoiseGit
+- Follow the steps on the setup on : https://git-scm.com/download/win
+- Same for : https://tortoisegit.org/download/
+- Open PuTTYgen, found in the TortoiseGit folder
+- Create a public/private keypair. Save them both in a place you can later find
+- Open 'Pageant', also in TortoiseGit folder, and set the key just created
+
 ### SETUP GIT REPOSITORY	
 - right click the desired folder
 - select 'git create repository here' 
-- no worries about the message (it is indeed non-empty but that right)
-- create a '.gitignore' file where you specify which files you do not want to push to the repository
-- right click on the folder again
+- no worries about the pop-up message (it is indeed non-empty but that right)
+- create a '.gitignore' file (nothing in front, simply dot-gitignore), where you specify which files you do not want to push to the repository 
+	(e.g. when creating datafiles for analysis, you might not want them to your repository)
+	(usefull doc: https://www.pluralsight.com/guides/how-to-use-gitignore-file)
+- right click inside the folder again
 - this time, the option " Git Commit -> 'master' ... "  should appear. Click on that.
-- If done correctly, the files/extensions from .gitignore do not appear here
+- If done correctly, the files/extensions .gitignore appear in 'not versioned files'
 - Select the files you want to have in the repository
 - Add a descriptive message in the 'message'-box (not general but specific to what is done)
+- Press Commit
+- Press close
+- Right click -> TortoiseGit -> Push
 
 ### SYNC WITH GITHUB
+- Right click on the folder, ->TortoiseGit -> Pull 
+- Choose Arbitrary URL and copy the link from 'Clone or download' from your github repository
 - Right click on the folder and go to ' Git sync' 
 - Keep that open while you go to the github-repository and click 'Clone or download'  and copy the url
 - Paste the link in the 'Remote URL:'  tab
@@ -18,7 +32,7 @@
 - Now the repository should be locally on your computer
 
 ### SETUP DIFF WITH LABVIEW ON TORTOISEGIT
-- Right click -> TortoiseGit -> Settings -> Diff Viewer -> Advanced
+- Right click on folder -> TortoiseGit -> Settings -> Diff Viewer -> Advanced
 - Set extension to '.vi'  and External program to :  "C:\Program Files (x86)\National Instruments\Shared\LabVIEW Compare\LVCompare.exe" %mine %base -nobdcosm -nobdpos
 	or an other location where LVCompare.exe is saved
 - Do the same for 'ctl', 'ctt', 'vit'  
@@ -27,9 +41,11 @@
 
 ### Compare VI's, CTL's etc.
 - Once something is changed, right click in the folder
-- Select 'TortoiseGit -> Diff' and observe the differences made in the LVCompare.exe
+- Select 'TortoiseGit -> Diff' and observe the differences made with use of LVCompare.exe
 
 ### GET NEW FILES
-- Merge branch with master branch
-- Right click -> TortoiseGit -> Merge
-- Select 'master' 
+- There are different ways to get your master branch up to date
+- Once all the other branches are pushed to the origin, you can simply pull from that origin
+- Sometimes you would want to merge with a branch, while leaving other branches alone
+
+
