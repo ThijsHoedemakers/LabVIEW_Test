@@ -29,5 +29,7 @@
 - Once something is changed, right click in the folder
 - Select 'TortoiseGit -> Diff' and observe the differences made in the LVCompare.exe
 
-
-
+### GET NEW FILES
+- Merge branch with master branch
+- Right click -> TortoiseGit -> Merge
+- Select 'master' 
