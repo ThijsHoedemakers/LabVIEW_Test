@@ -1,0 +1,33 @@
+### SETUP GIT REPOSITORY	
+- right click the desired folder
+- select 'git create repository here' 
+- no worries about the message (it is indeed non-empty but that right)
+- create a '.gitignore' file where you specify which files you do not want to push to the repository
+- right click on the folder again
+- this time, the option " Git Commit -> 'master' ... "  should appear. Click on that.
+- If done correctly, the files/extensions from .gitignore do not appear here
+- Select the files you want to have in the repository
+- Add a descriptive message in the 'message'-box (not general but specific to what is done)
+
+### SYNC WITH GITHUB
+- Right click on the folder and go to ' Git sync' 
+- Keep that open while you go to the github-repository and click 'Clone or download'  and copy the url
+- Paste the link in the 'Remote URL:'  tab
+- NOTE : if you get an error do the following first : 
+	-you might have to do a 'pull'  first (right click on the folder -> TortoiseGit -> Pull )
+- Now the repository should be locally on your computer
+
+### SETUP DIFF WITH LABVIEW ON TORTOISEGIT
+- Right click -> TortoiseGit -> Settings -> Diff Viewer -> Advanced
+- Set extension to '.vi'  and External program to :  "C:\Program Files (x86)\National Instruments\Shared\LabVIEW Compare\LVCompare.exe" %mine %base -nobdcosm -nobdpos
+	or an other location where LVCompare.exe is saved
+- Do the same for 'ctl', 'ctt', 'vit'  
+- Go to 'Merge Tool'  underneath 'Diff Viewer' 
+- Do the same for 'vi','vit','ctt' and 'ctl'  with the following External program : "C:\Program Files (x86)\National Instruments\Shared\LabVIEW Merge\LVMerge.exe" %base %theirs %mine %merged
+
+### Compare VI's, CTL's etc.
+- Once something is changed, right click in the folder
+- Select 'TortoiseGit -> Diff' and observe the differences made in the LVCompare.exe
+
+
+
